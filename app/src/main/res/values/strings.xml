@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">MusicApplication</string>
     <string name="music_application">Music Application</string>
+    <string name="shuffle_btn">Shuffle</string>
+    <string name="playlist_btn">Playlist</string>
+    <string name="favorites_btn">Favorites</string>
+
 </resources>
