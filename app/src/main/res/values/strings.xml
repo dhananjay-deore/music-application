@@ -4,5 +4,10 @@
     <string name="shuffle_btn">Shuffle</string>
     <string name="playlist_btn">Playlist</string>
     <string name="favorites_btn">Favorites</string>
+    <string name="music_player">Music Player</string>
+    <string name="song_name">Song Name</string>
+    <string name="music_length">Loading...</string>
+    <string name="music_progress">00:00</string>
+    <string name="artist_name">Artist Name</string>
 
 </resources>
