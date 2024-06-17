@@ -1,45 +1,30 @@
 package com.example.musicapplication.view
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
-import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import com.example.musicapplication.R
+import com.example.musicapplication.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    private val TAG = "MainActivity"
+    private val TAG = this::class.java.simpleName
+    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setTheme(R.style.Theme_MusicApplication)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        setContentView(R.layout.activity_main)
-        Log.d(TAG, TAG+ " onCreate")
+        binding.btnShuffle.setOnClickListener {
+            startActivity(Intent(this, PlayerActivity::class.java))
+        }
 
-    }
+        binding.btnPlaylist.setOnClickListener{
+            startActivity(Intent(this, Playlist_Activity::class.java))
+        }
 
-
-    override fun onStart() {
-        super.onStart()
-        Log.d(TAG, TAG+ " onStart")
-    }
-    override fun onStop() {
-        super.onStop()
-        Log.d(TAG, TAG+ " onStop")
-    }
-
-
-
-    override fun onPause() {
-        super.onPause()
-        Log.d(TAG, TAG+ " onPause")
-    }
-
-    override fun onResume() {
-        super.onResume()
-        Log.d(TAG, TAG+ " onResume")
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        Log.d(TAG, TAG+ " onDestroy")
+        binding.btnFavorites.setOnClickListener{
+            startActivity(Intent(this, FavoritesActivity::class.java))
+        }
     }
 }

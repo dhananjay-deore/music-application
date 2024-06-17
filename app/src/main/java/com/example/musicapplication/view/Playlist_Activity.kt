@@ -2,11 +2,13 @@ package com.example.musicapplication.view
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.musicapplication.R
+import com.example.musicapplication.databinding.ActivityPlaylistBinding
 
 class Playlist_Activity : AppCompatActivity() {
+    private lateinit var binding: ActivityPlaylistBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_playlist)
+        binding = ActivityPlaylistBinding.inflate(layoutInflater)
+        setContentView(binding.root)
     }
 }
